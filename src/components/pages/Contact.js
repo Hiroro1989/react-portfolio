@@ -1,22 +1,69 @@
-import React from 'react';
+import React, {useState} from 'react';
+import { validateEmail } from '../util/helpers';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const isValidEmail = validateEmail(formData.email);
+
+    if (isValidEmail){
+      setFormData({ name: '', email: '', message: '' });
+    }else{
+      window.alert('Invalied email address!')
+    }
+  };
+
   return (
-    <div>
-      <h1>Contact</h1>
-      <p>
-        Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-        molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-        magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-        efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-        mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-        posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-        faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-        ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-        dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-        conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-        rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-      </p>
+    <div className="contact">
+      <h2>Contact Me</h2>
+      {/* need to add onSubmit */}
+      <form className='contact-form' onSubmit={handleSubmit}>
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlInput1" className="form-label">
+          Email address
+        </label>
+        <input
+          type="email"
+          className="form-control"
+          id="exampleFormControlInput1"
+          name="email"
+          placeholder="name@example.com"
+          value={formData.email}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlTextarea1" className="form-label">
+          Example textarea
+        </label>
+        <textarea
+          className="form-control"
+          id="exampleFormControlTextarea1"
+          name="message"
+          rows="3"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      <button type="submit" className="btn btn-primary">
+        Submit
+      </button>
+
+      </form>
+      
     </div>
   );
 }
