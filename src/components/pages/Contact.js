@@ -31,6 +31,21 @@ export default function Contact() {
       <form className='contact-form' onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="exampleFormControlInput1" className="form-label">
+          Name
+        </label>
+        <input
+          type="text"
+          className="form-control"
+          id="exampleFormControlInput1"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+      </div>
+      
+      <div className="mb-3">
+        <label htmlFor="exampleFormControlInput1" className="form-label">
           Email address
         </label>
         <input

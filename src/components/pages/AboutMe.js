@@ -3,9 +3,9 @@ import photo from "../../assets/about-me/hiroakiArai.jpg"
 
 export default function AboutMe() {
   return (
-    <div>
-      <h1>About Me</h1>
-      <div className="">
+    <div className="container">
+      <h2 className="row">About Me</h2>
+      <div>
         <img src={photo} className="" height="100px" width="75px" />
       </div>
       <p>
