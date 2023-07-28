@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer(){
     return(
-        <footer class="footer mt-4 py-3 bg-light">
+        <footer class="footer mt-3 py-3 bg-light">
           <div class="container text-center">
 
       {/* twitter */}

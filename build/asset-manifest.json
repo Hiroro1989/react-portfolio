@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/react-portfolio/static/css/main.4da62354.css",
+    "main.js": "/react-portfolio/static/js/main.8a80cafb.js",
+    "static/media/memory-game.png": "/react-portfolio/static/media/memory-game.6d04568f1a66cbce464e.png",
+    "static/media/JATE.png": "/react-portfolio/static/media/JATE.2085e1705772c04f980e.png",
+    "static/media/scheduler.png": "/react-portfolio/static/media/scheduler.ab28d7d4a7b7f002634c.png",
+    "static/media/weather-dashboard.png": "/react-portfolio/static/media/weather-dashboard.cf25a1c620cc608e6e78.png",
+    "static/media/HiroakiAraiResume.pdf": "/react-portfolio/static/media/HiroakiAraiResume.f46735a68037e2337444.pdf",
+    "static/media/note-taker.png": "/react-portfolio/static/media/note-taker.dca43049ab2b0b0b9841.png",
+    "static/media/password-generator.png": "/react-portfolio/static/media/password-generator.aa25cbf89939def02f6b.png",
+    "static/media/hiroakiArai.jpg": "/react-portfolio/static/media/hiroakiArai.772b8960f8451f5987bb.jpg",
+    "index.html": "/react-portfolio/index.html",
+    "main.4da62354.css.map": "/react-portfolio/static/css/main.4da62354.css.map",
+    "main.8a80cafb.js.map": "/react-portfolio/static/js/main.8a80cafb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4da62354.css",
+    "static/js/main.8a80cafb.js"
+  ]
+}

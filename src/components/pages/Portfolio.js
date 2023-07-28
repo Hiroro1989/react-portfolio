@@ -48,21 +48,36 @@ export default function Portfolio() {
       repoLink:'https://github.com/Hiroro1989/Password-Generator',
     },
   ]
-    return (
-      <div className="container">
-        <h2 className="row">Portfolio</h2>
-        <div className="projects-container">
-        {projects.map((project) => (
-          <Project
-            title={project.title}
-            img={project.img}
-            deployedLink={project.deployedLink}
-            repoLink={project.repoLink}
-          />
-        ))}
-      </div>
-        
-      </div>
-    );
+
+  function chunkProjects(array, size) {
+    const chunkedArray = [];
+    for (let i = 0; i < array.length; i += size) {
+      chunkedArray.push(array.slice(i, i + size));
+    }
+    return chunkedArray;
   }
+  
+  const chunkedProjects = chunkProjects(projects, 3);
+
+
+  return (
+    <div className="container">
+      <h2 className="row">Portfolio</h2>
+      {/* Render each group of three projects */}
+      {chunkedProjects.map((projectGroup, index) => (
+        <div className="row" key={index}>
+          {projectGroup.map((project) => (
+            <div className="col-md-4" key={project.title}>
+              <Project
+                title={project.title}
+                img={project.img}
+                deployedLink={project.deployedLink}
+                repoLink={project.repoLink}
+              />
+            </div>
+          ))}
+        </div>
+      ))}
+    </div>
+  );  }
   
