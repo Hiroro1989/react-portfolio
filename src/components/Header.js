@@ -3,7 +3,7 @@ import React from "react";
 
 function Header({ currentPage, handlePageChange }) {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-sm navbar-light bg-light">
       <div className="container-fluid">
         <span className="navbar-brand">Hiroaki Arai</span>
         
@@ -47,6 +47,7 @@ function Header({ currentPage, handlePageChange }) {
               </a>
             </li>
           </ul>
+          
         </div>
       </div>
     </nav>
