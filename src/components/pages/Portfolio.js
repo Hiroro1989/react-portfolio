@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React from "react";
 
 import Project from "./Project";
@@ -42,10 +43,10 @@ export default function Portfolio() {
       repoLink:'https://github.com/Hiroro1989/Work-Day-Scheduler',
     },
     {
-      title:'Password-Generator',
-      img:passwordGenerator,
-      deployedLink:'https://hiroro1989.github.io/Password-Generator/',
-      repoLink:'https://github.com/Hiroro1989/Password-Generator',
+      title:'ShoppingHub',
+      img:shoppinghub,
+      deployedLink:'https://peaceful-coast-10837-e5ffde853d9b.herokuapp.com/',
+      repoLink:'https://github.com/Saloni0412/ShoppingHub',
     },
   ]
 
